@@ -1,5 +1,7 @@
 body{
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/skyrim_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .jumbotron{
@@ -26,10 +28,7 @@ footer {
     background-color: rgb(245, 70, 70);
     color: white;
   }
-  #instructArea{
-background-color:tan; 
 
-  }
  #gem1{
      background-color: white;
  }
