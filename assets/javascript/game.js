@@ -10,16 +10,21 @@ var randomUser = "";
 var randomAssign = [];
 
 
+
 $(document).ready(function () {
+
+    $("#steelAxeBtn").attr(Math.floor(Math.random() * (+userMaxNum - +userMinNum) + +userMinNum));
+    console.log("Here is the information after attr" + S("#steelAxeBtn"));
+    
 
     function start() {
 
         randomCom = Math.floor(Math.random() * (+maxComNum - +minComNum) + +minComNum);
         console.log("Random Number Generated : " + randomCom);
 
-        //for (var i = 0; i < userChoice.length; i++) {
-        //    randomAssign = Math.floor(Math.random() * (+userMaxNum - +userMinNum) + +userMinNum);
-        //    console.log("Random User Number Generated : " + randomAssign);
+      //  for (var i = 0; i < userChoice.length; i++) {
+      //     randomAssign = Math.floor(Math.random() * (+userMaxNum - +userMinNum) + +userMinNum);
+      //      console.log("Random User Number Generated : " + randomAssign);
             
            
         
@@ -30,11 +35,11 @@ $(document).ready(function () {
         //console.log("Random number assigned to randomAssign outside loop:  " + randomUser);
 
         
-        $("#steelAxeBtn").on("click", function() {
-            randomUser = Math.floor(Math.random() * (+userMaxNum - +userMinNum) + +userMinNum);
-            console.log("Random User Number Generated : " + randomUser);
+      //  $("#steelAxeBtn").on("click", function() {
+       //     randomUser = Math.floor(Math.random() * (+userMaxNum - +userMinNum) + +userMinNum);
+       //     console.log("Random User Number Generated : " + randomUser);
 
-        });
+       // });
 
     }
     start();
