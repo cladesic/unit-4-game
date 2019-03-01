@@ -14,6 +14,8 @@ $(document).ready(function () {
 //----Start function for page ----------- 
   function start() {
     
+ 
+    
     btn1 = Math.floor(Math.random() * (+userMaxNum - +userMinNum) + +userMinNum);
     btn2 = Math.floor(Math.random() * (+userMaxNum - +userMinNum) + +userMinNum);
     btn3 = Math.floor(Math.random() * (+userMaxNum - +userMinNum) + +userMinNum);
@@ -26,20 +28,28 @@ $(document).ready(function () {
 //-----------Button 1 "Axe"--------------------------------         
     $("#steelAxeBtn").click(function () {
       $("#hitScore").val(btn1);
+     // console.log("Here is the btn assignment " + " " + btn1)
         if (randomCom !== totalHit || randomCom > totalHit) {
             randomCom = randomCom - btn1;
+            totalHit = totalHit + btn1;
             $("#healthNumber").val(randomCom);
+            $("#hitScore").val(totalHit);
         } if (randomCom < totalHit) {
             lose++;
             $(".badge-error").text(lose);
             $('#hitScore').val('');
+            totalHit = 0;
+            btn1 = 0;
             alert("You lose");
+            console.log ("here is the data" + " " + totalHit + " " + btn1);
             start();
         } if (randomCom === totalHit) {
             win++;
             $(".badge-success").text(win);
             $('#hitScore').val('');
             alert("You Win");
+            totalHit = 0;
+            btn1 = 0;
             start();
         } else $("Game Over");
     });
@@ -49,18 +59,24 @@ $(document).ready(function () {
       $("#hitScore").val(btn2);
         if (randomCom !== totalHit || randomCom > totalHit) {
             randomCom = randomCom - btn2;
+            totalHit = totalHit + btn2;
             $("#healthNumber").val(randomCom);
+            $("#hitScore").val(totalHit);
         } if (randomCom < totalHit) {
             lose++;
             $(".badge-error").text(lose);
             $('#hitScore').val('');
             alert("You lose");
+            totalHit = 0;
+            btn2 = 0;
             start();
         } if (randomCom === totalHit) {
             win++;
             $(".badge-success").text(win);
             $('#hitScore').val('');
             alert("You Win");
+            totalHit = 0;
+            btn2 = 0;
             start();
         } else ("Game Over");
     });
@@ -70,18 +86,24 @@ $(document).ready(function () {
       $("#hitScore").val(btn3);
         if (randomCom !== totalHit || randomCom > totalHit) {
             randomCom = randomCom - btn3;
+            totalHit = totalHit + btn3;
             $("#healthNumber").val(randomCom);
+            $("#hitScore").val(totalHit);
         } if (randomCom < totalHit) {
             lose++;
             $(".badge-error").text(lose);
             $('#hitScore').val('');
             alert("You lose");
+            totalHit = 0;
+            btn3 = 0;
             start();
         } if (randomCom === totalHit) {
             win++;
             $(".badge-success").text(win);
             $('#hitScore').val('');
             alert("You Win");
+            totalHit = 0;
+            btn3 = 0;
             start();
         } else ("Game Over");
       });
@@ -91,23 +113,29 @@ $(document).ready(function () {
       $("#hitScore").val(btn4);
         if (randomCom !== totalHit || randomCom > totalHit) {
             randomCom = randomCom - btn4;
+            totalHit = totalHit + btn4;
             $("#healthNumber").val(randomCom);
+            $("#hitScore").val(totalHit);
         } if (randomCom < totalHit) {
             lose++;
             $(".badge-error").text(lose);
             $('#hitScore').val('');
             alert("You lose");
+            totalHit = 0;
+            btn4 = 0;
             start();
         } if (randomCom === totalHit) {
             win++;
             $(".badge-success").text(win);
             $('#hitScore').val('');
             alert("You Win");
+            totalHit = 0;
+            btn4 = 0;
             start();
         } else ("Game Over");
             
       });
-
+      console.log ("here is the data end of function" + " " + totalHit + " " + btn1);
   }
 
   start();
